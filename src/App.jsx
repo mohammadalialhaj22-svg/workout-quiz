@@ -1,4 +1,12 @@
 import React, { useState } from 'react';
+import gokuImg from './images/gokuu.jpg';
+import calendarImg from './images/weeklycalender.jpg';
+import injuryImg from './images/injuries.jpg';
+import musclesImg from './images/focus.jpg';
+import intensityImg from './images/intensity.jpg';
+import fullbodyImgFile from './images/fullbody.jpg';
+import upperlowerImgFile from './images/upperlower.jpg';
+import pplImgFile from './images/ppl.jpg';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -9,16 +17,16 @@ export default function App() {
   const [contactEmail, setContactEmail] = useState('');
   const [contactMsg, setContactMsg] = useState('');
 
-  const images = {
-    goku: "src/images/gokuu.jpg", 
-    calendar: "src/images/weeklycalender.jpg",
-    injury: "src/images/injuries.jpg",
-    muscles: "src/images/focus.jpg",
-    intensity: "src/images/intensity.jpg",
-    fullbodyImg: "src/images/fullbody.jpg",
-    upperlowerImg: "src/images/upperlower.jpg",
-    pplImg: "src/images/ppl.jpg"
-  };
+ const yourObjectName = {
+    goku: gokuImg, 
+    calendar: calendarImg,
+    injury: injuryImg,
+    muscles: musclesImg,
+    intensity: intensityImg,
+    fullbodyImg: fullbodyImgFile,
+    upperlowerImg: upperlowerImgFile,
+    pplImg: pplImgFile
+};
 
   const handleNavigation = (tabName) => {
     setActiveTab(tabName);
