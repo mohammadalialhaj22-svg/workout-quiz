@@ -17,7 +17,8 @@ export default function App() {
   const [contactEmail, setContactEmail] = useState('');
   const [contactMsg, setContactMsg] = useState('');
 
- const yourObjectName = {
+
+  const images = {
     goku: gokuImg, 
     calendar: calendarImg,
     injury: injuryImg,
@@ -26,7 +27,7 @@ export default function App() {
     fullbodyImg: fullbodyImgFile,
     upperlowerImg: upperlowerImgFile,
     pplImg: pplImgFile
-};
+  };
 
   const handleNavigation = (tabName) => {
     setActiveTab(tabName);
@@ -43,8 +44,8 @@ export default function App() {
   const handleContactSubmit = (e) => {
     e.preventDefault();
     if(contactName === '' || contactEmail === '') {
-      alert('Please fill out your name and email');
-         return;
+       alert('Please fill out your name and email');
+       return;
     }
     alert('Thank you ' + contactName + '! Your inquiry has been submitted.');
     setContactName('');
